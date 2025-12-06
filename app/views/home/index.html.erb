@@ -1,0 +1,16 @@
+<h1 class="text-3xl">ホーム</h1>
+<div class="p-4">
+  <%- if user_signed_in? -%>
+    <div class="py-2">
+      <p class="mb-2">ログイン中: <%= current_user.email %></p>
+      <%= link_to "パスキーを追加する", new_registration_path, class: 'py-2 px-4 text-slate-50 bg-lime-500 rounded' %>
+    </div>
+    <%= button_to "ログアウト", destroy_user_session_path, method: :delete, class: 'py-2 px-4 text-slate-50 bg-zinc-500 rounded' %>
+  <%- else -%>
+    <div class="flex gap-2">
+      <%= link_to "ログイン", new_user_session_path, class: 'py-2 px-4 text-slate-50 bg-blue-500 rounded' %>
+      <%= link_to "パスキーでログイン", new_session_path, class: 'py-2 px-4 text-slate-50 bg-blue-500 rounded' %>
+      <%= link_to "新規登録", new_user_registration_path, class: 'py-2 px-4 text-slate-50 bg-green-500 rounded' %>
+    </div>
+  <%- end -%>
+</div>

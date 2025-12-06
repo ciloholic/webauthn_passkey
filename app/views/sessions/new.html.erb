@@ -1,0 +1,16 @@
+<div class="p-4 flex basis-1 flex-col">
+  <h1 class="text-3xl w-full mb-4">パスキーでログイン</h1>
+  <form id="session-form" class="flex flex-col gap-4">
+    <div>
+      <label for="email" class="block mb-1">メールアドレス</label>
+      <input type="email" id="email" name="email" required
+             class="border rounded px-2 py-1" placeholder="example@example.com" />
+    </div>
+    <div>
+      <button type="submit" class="py-2 px-4 text-slate-50 bg-blue-500 rounded">
+        ログイン
+      </button>
+    </div>
+  </form>
+  <div id="error-message" class="text-red-500 mt-4"></div>
+</div>
