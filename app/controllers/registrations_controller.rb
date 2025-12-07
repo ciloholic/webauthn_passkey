@@ -52,6 +52,6 @@ class RegistrationsController < ApplicationController
     Rails.logger.error { e }
     render json: { errors: [ e.message ] }, status: :unprocessable_entity
   ensure
-    session.delete('current_registration')
+    session.delete('creation_registration')
   end
 end
